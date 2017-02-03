@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">"
+    <title>Contact Card</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.submit').click(function(){
+          $('#card_pane').append(
+            '<div class="cards">'
+              + '<h2 id="front"><center>'
+                + $('input:eq(0)').val() + '  ' + $('input:eq(1)').val()
+              + '</center></h2>'
+              + '<p id="front"><center>Click to see desription</center></p>'
+              + '<span>' + $('textarea').val() + '</span>'
+            + '</div>'
+          );
+          return false;
+        });
+        $(document).on('click', '.cards', function(){
+          if (($(this).children('span').css('visibility')) === 'hidden')
+          {
+            $(this).children().attr('style', 'display: none');
+            $(this).children('span').attr('style', 'visibility: visible');
+          }
+          else
+          {
+            $(this).children().attr('style', 'display: block');
+            $(this).children('span').attr('style', 'visibility: hidden');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <form class="input_form">
+        First Name: <input type="text" name="fname" value="">
+        Last Name: <input type="text" name="lname" value="">
+
+        <p class="dsc">Description</p>
+        <textarea name="descript" rows="8" cols="40"></textarea>
+
+        <input type="submit" class="submit" value="Add User">
+      </form>
+      <div id="card_pane"></div>
+    </div>
+  </body>
+</html>

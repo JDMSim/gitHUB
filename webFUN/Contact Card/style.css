@@ -1,0 +1,58 @@
+/**{outline: 2px dotted red}*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper{
+  width: 600px;
+  height: auto;
+}
+
+.input_form{
+  display: inline-block;
+  width: 310px;
+}
+
+input{
+  display: block;
+}
+
+.dsc{
+  margin-top: 30px;
+}
+
+textarea{
+  margin-bottom: 20px;
+}
+
+#card_pane{
+  width: 240px;
+  height: auto;;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/*Dynamic stuff*/
+
+.cards{
+  width: auto;
+  height: 50px;
+  margin-bottom: 10px;
+  border: solid;
+}
+
+.cards h3{
+
+}
+
+.card h2{
+
+}
+
+.cards span{
+  visibility: hidden;
+}
